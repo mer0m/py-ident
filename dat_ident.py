@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Mar 16 10:22:54 2016
-
-@author: Baptiste Marechal
-"""
 
 import csv, time, glob, datetime, os
 import matplotlib.pyplot as plt
