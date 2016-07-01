@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Mar 11 11:04:35 2016
-
-@author: Baptiste Marechal
-"""
 
 from scipy import signal, linspace, pi, randn, ones
 from scipy.optimize import curve_fit
