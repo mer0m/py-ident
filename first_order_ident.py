@@ -9,9 +9,9 @@ tic = time.time()
 
 '''function to optimize'''
 def func(u, K, tau, y0):
-    sys = signal.lti(K, [tau, 1])
-    y = sys.output(u, t, y0)
-    return y[1]
+	sys = signal.lti(K, [tau, 1])
+	y = sys.output(u, t, y0)
+	return y[1]
 
 '''input square signal'''
 global t

@@ -12,11 +12,11 @@ tic = time.time()
 os.chdir('/home/user/sicav_data/Manip/2016/2016-03/')
 
 def getColumn(filename, column):
-    results = []
-    for dat_file in sorted(glob.glob(filename)):
-        file_result = csv.reader(open(dat_file), delimiter='\t')
-        results = results + map(float,[result[column] for result in file_result])
-    return results
+	results = []
+	for dat_file in sorted(glob.glob(filename)):
+		file_result = csv.reader(open(dat_file), delimiter='\t')
+		results = results + map(float,[result[column] for result in file_result])
+	return results
 
 t = getColumn('*-lakeshore.dat', 0)
 T1 = getColumn('*-lakeshore.dat', 2)
@@ -33,9 +33,9 @@ T3 = [T3[n*i] for i in range(len(T3)/n)]
 T4 = [T4[n*i] for i in range(len(T4)/n)]
 
 def func(U, a0, b1, b2, y0):
-    sys = signal.lti([a0],[b2, b1, 1])
-    y = sys.output(U, t, y0)
-    return y[1]
+	sys = signal.lti([a0],[b2, b1, 1])
+	y = sys.output(U, t, y0)
+	return y[1]
 
 print('Fitting...')
 popt, cov = curve_fit(func, T1, T4)
