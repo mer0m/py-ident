@@ -9,7 +9,7 @@ import matplotlib.dates as md
 
 tic = time.time()
 
-os.chdir('/home/user/sicav_data/Manip/2016/2016-03/')
+os.chdir('/home/bma/server/data/2016/2016-03')
 
 def getColumn(filename, column):
 	results = []
